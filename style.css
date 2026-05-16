@@ -52,7 +52,6 @@ input:disabled {
 }
 /* Slider specific styling */
 input[type=range] {
-    -webkit-appearance: none;
     background: transparent;
     padding: 0;
 }
