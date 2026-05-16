@@ -34,8 +34,18 @@
                     <td><input type="text" id="years" placeholder="e.g. 10" inputmode="numeric"></td>
                     <td><input type="text" id="yearsDelayed" disabled></td>
                 </tr>
+                <tr>
+                    <td class="label-cell">Delay: <span id="delayVal">10</span> Years</td>
+                    <td colspan="2">
+                        <input type="range" id="delaySlider" min="5" max="35" value="5" style="cursor: pointer; width: 100%;">
+                    </td>
+                </tr>
             </tbody>
         </table>
+        
+        <div id="error-message" style="color: #d9534f; font-size: 0.9rem; margin-bottom: 10px; display: none; text-align: center; font-weight: bold;">
+            Delay cannot be greater than or equal to the total time period.
+        </div>
 
         <button onclick="calculateDelay()"><b>Calculate</b></button>
 
