@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #f9ffff;
+}
+
+.calculator-card {
+    background: transparent;
+    border-radius: 8px;
+    max-width: 600px; /* Increased width to accommodate the 4x4 grid */
+    width: 100%;
+}
+
+h2 { color: #333; margin-bottom: 10px; text-align: center; }
+
+/* Grid Table Styling */
+.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.grid-table th {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.grid-table td {
+    padding: 8px;
+}
+
+.label-cell {
+    font-weight: bold;
+    font-size: 14px;
+    width: 35%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input:disabled {
+    background-color: #f0f0f0;
+    color: #888;
+    border: 1px dashed #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button:hover { background-color: #218838; }
+
+.results {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #eee;
+}
+
+/* Result Table Specifics */
+.result-table td {
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.result-table .label-cell {
+    text-align: left;
+}
+
+.total-row {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.total-row td {
+    font-size: 17px;
+    padding-top: 10px;
+}
+.summary-results {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.summary-results p {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.summary-results p::before {
+    content: "➤";
+    position: absolute;
+    left: 0;
+    color: #28a745; /* Matches your green theme */
+    font-weight: bold;
+}
+
+.highlight-red { color: #d9534f; font-weight: bold; }
+.highlight-green { color: #28a745; font-weight: bold; }
+
+.error {
+    border: 1.5px solid #d9534f !important;
+    background-color: #fff9f9;
+}
+
+.disclaimer {
+    font-size: 11px;
+    color: #666;
+    margin-top: 20px;
+}

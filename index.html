@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost of Delay Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-card">
+        <h2>Cost of Delay Calculator</h2>
+        
+        <table class="grid-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Now</th>
+                    <th>Delayed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="label-cell">Monthly Investment (₹)</td>
+                    <td><input type="text" id="monthlyAmount" placeholder="e.g. 10,000" inputmode="numeric"></td>
+                    <td><input type="text" id="monthlyAmountDelayed" disabled></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Expected Returns (% p.a.)</td>
+                    <td><input type="text" id="rate" placeholder="e.g. 12" inputmode="numeric"></td>
+                    <td><input type="text" id="rateDelayed" disabled></td>
+                </tr>
+                <tr>
+                    <td class="label-cell">Time Period (in Years)</td>
+                    <td><input type="text" id="years" placeholder="e.g. 10" inputmode="numeric"></td>
+                    <td><input type="text" id="yearsDelayed" disabled></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button onclick="calculateDelay()"><b>Calculate</b></button>
+
+        <div class="results" id="results" style="display: none;">
+            <table class="grid-table result-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Now</th>
+                        <th>Delayed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="label-cell">Invested Amount</td>
+                        <td id="investedNow">₹0</td>
+                        <td id="investedDelayed">₹0</td>
+                    </tr>
+                    <tr>
+                        <td class="label-cell">Estimated Gains</td>
+                        <td id="returnsNow">₹0</td>
+                        <td id="returnsDelayed">₹0</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td class="label-cell">Final Portfolio Value</td>
+                        <td id="totalNow">₹0</td>
+                        <td id="totalDelayed">₹0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="summary-results">
+                <p>Loss in portfolio value due to delay in investing: <span id="lossAmount" class="highlight-red">₹0</span></p>
+                <p>To reach the same level of wealth, you will have to do an SIP of <span id="requiredSIP" class="highlight-green">₹0</span></p>
+            </div>
+
+            <div class="disclaimer">
+                *Disclaimer: Investment in securities market are subject to market risks.
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
